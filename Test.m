@@ -1,0 +1,3 @@
+CPfunc=@(x)-interpn(windVec,rpmVec,pitchVec,mechCp,x(1),x(2),x(3),'linear');
+[x,fval] = fminsearch(CPfunc, [10,8,0.1], ...
+    optimset('MaxFunEvals',10e10))
